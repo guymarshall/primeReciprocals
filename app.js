@@ -23,12 +23,17 @@ lineReader.question('Enter a number: ', (number) => {
         counter++;
     }
 
+    let primesWithReciprocalRepeatingDigitCounts = {};
     primes.forEach(element => {
         if (element === 2 || element === 5) {
             return;
         }
 
+        const repeatingDigitCount = reciprocalDecimalCount(element);
 
+        console.log(`Reciprocal of ${element} repeats after ${repeatingDigitCount} digits.`);
+
+        primesWithReciprocalRepeatingDigitCounts[element] = repeatingDigitCount;
     });
     lineReader.close();
 });
