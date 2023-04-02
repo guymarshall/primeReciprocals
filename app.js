@@ -1,3 +1,4 @@
+const isPrime = require('./prime');
 const readline = require('readline');
 
 const lineReader = readline.createInterface({
