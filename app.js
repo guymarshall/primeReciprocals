@@ -35,5 +35,9 @@ lineReader.question('Enter a number: ', (number) => {
 
         primesWithReciprocalRepeatingDigitCounts[element] = repeatingDigitCount;
     });
+
+    for (let key in primesWithReciprocalRepeatingDigitCounts) {
+        console.log(`${key}: ${primesWithReciprocalRepeatingDigitCounts[key]}`);
+    }
     lineReader.close();
 });
