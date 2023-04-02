@@ -14,6 +14,6 @@ const isPrime = input => {
         }
     }
     return true;
-};  
+};
 
 module.exports = isPrime;
