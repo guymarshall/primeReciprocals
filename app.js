@@ -21,5 +21,13 @@ lineReader.question('Enter a number: ', (number) => {
 
         counter++;
     }
+
+    primes.forEach(element => {
+        if (element === 2 || element === 5) {
+            return;
+        }
+
+        
+    });
     lineReader.close();
 });
