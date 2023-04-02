@@ -8,5 +8,9 @@ const lineReader = readline.createInterface({
 
 lineReader.question('Enter a number: ', (number) => {
     console.log(`You entered: ${number}`);
+
+    for (let i = 0; i < number; i++) {
+        console.log(`${i} is prime: ${isPrime(i)}`);
+    }
     lineReader.close();
 });
