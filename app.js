@@ -7,8 +7,17 @@ const lineReader = readline.createInterface({
 });
 
 lineReader.question('Enter a number: ', (number) => {
-    for (let i = 0; i < number; i++) {
-        console.log(`${i} is prime: ${isPrime(i)}`);
+    let counter = 0;
+    let primeCount = 0;
+
+    while (primeCount < number) {
+        const isPrimeNumber = isPrime(counter);
+        if (isPrimeNumber) {
+            console.log(counter);
+            primeCount++;
+        }
+
+        counter++;
     }
     lineReader.close();
 });
