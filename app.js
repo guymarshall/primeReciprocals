@@ -1,4 +1,5 @@
 const isPrime = require('./prime');
+const reciprocalDecimalCount = require('./reciprocal');
 const readline = require('readline');
 
 const lineReader = readline.createInterface({
@@ -27,7 +28,7 @@ lineReader.question('Enter a number: ', (number) => {
             return;
         }
 
-        
+
     });
     lineReader.close();
 });
