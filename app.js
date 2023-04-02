@@ -24,19 +24,17 @@ lineReader.question('Enter a number: ', (number) => {
     }
 
     console.log('Calculating reciprocal repeating digit counts...');
-    let reciprocalRepeatingDigitCounts = {};
-    primes.forEach(element => {
-        if (element === 2 || element === 5) {
-            return;
-        }
+    let reciprocalRepeatingDigitCounts = new Array(number);
 
+    for (let i = 0; i < number; i++) {
+        const element = primes[i];
         const repeatingDigitCount = reciprocalDecimalCount(element);
 
-        reciprocalRepeatingDigitCounts[element] = repeatingDigitCount;
-    });
+        reciprocalRepeatingDigitCounts[i] = repeatingDigitCount;
+    }
 
-    for (let key in reciprocalRepeatingDigitCounts) {
-        console.log(`${key}: ${reciprocalRepeatingDigitCounts[key]}`);
+    for (let i = 0; i < number; i++) {
+        console.log(`Reciprocal of ${primes[i]} repeats after ${reciprocalRepeatingDigitCounts[i]} digits.`);
     }
     lineReader.close();
 });
