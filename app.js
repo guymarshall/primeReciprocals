@@ -13,8 +13,8 @@ lineReader.question('Enter a number: ', (number) => {
     while (primeCount < number) {
         const isPrimeNumber = isPrime(counter);
         if (isPrimeNumber) {
-            console.log(counter);
             primeCount++;
+            console.log(`${primeCount}: ${counter}`);
         }
 
         counter++;
