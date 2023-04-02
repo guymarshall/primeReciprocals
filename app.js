@@ -23,7 +23,7 @@ lineReader.question('Enter a number: ', (number) => {
         counter++;
     }
 
-    let primesWithReciprocalRepeatingDigitCounts = {};
+    let reciprocalRepeatingDigitCounts = {};
     primes.forEach(element => {
         if (element === 2 || element === 5) {
             return;
@@ -33,11 +33,11 @@ lineReader.question('Enter a number: ', (number) => {
 
         console.log(`Reciprocal of ${element} repeats after ${repeatingDigitCount} digits.`);
 
-        primesWithReciprocalRepeatingDigitCounts[element] = repeatingDigitCount;
+        reciprocalRepeatingDigitCounts[element] = repeatingDigitCount;
     });
 
-    for (let key in primesWithReciprocalRepeatingDigitCounts) {
-        console.log(`${key}: ${primesWithReciprocalRepeatingDigitCounts[key]}`);
+    for (let key in reciprocalRepeatingDigitCounts) {
+        console.log(`${key}: ${reciprocalRepeatingDigitCounts[key]}`);
     }
     lineReader.close();
 });
