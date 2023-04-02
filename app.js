@@ -12,17 +12,18 @@ lineReader.question('Enter a number: ', (number) => {
     let primeCount = 0;
     let primes = new Array(number);
 
+    console.log('Calculating primes...');
     while (primeCount < number) {
         const isPrimeNumber = isPrime(counter);
         if (isPrimeNumber) {
             primes[primeCount] = counter;
             primeCount++;
-            console.log(`${primeCount}: ${counter}`);
         }
 
         counter++;
     }
 
+    console.log('Calculating reciprocal repeating digit counts...');
     let reciprocalRepeatingDigitCounts = {};
     primes.forEach(element => {
         if (element === 2 || element === 5) {
@@ -30,8 +31,6 @@ lineReader.question('Enter a number: ', (number) => {
         }
 
         const repeatingDigitCount = reciprocalDecimalCount(element);
-
-        console.log(`Reciprocal of ${element} repeats after ${repeatingDigitCount} digits.`);
 
         reciprocalRepeatingDigitCounts[element] = repeatingDigitCount;
     });
