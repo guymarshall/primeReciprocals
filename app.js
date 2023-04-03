@@ -14,6 +14,9 @@ lineReader.question('Enter a number: ', (number) => {
 
     console.log('Calculating primes...');
     while (primeCount < number) {
+        if (counter === 2 || counter === 5) {
+            continue;
+        }
         const isPrimeNumber = isPrime(counter);
         if (isPrimeNumber) {
             primes[primeCount] = counter;
